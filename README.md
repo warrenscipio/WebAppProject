@@ -1,4 +1,7 @@
-# Blank react web project
+# React AI web projects
+
+This is going to be my attempt in collecting apps that I made with mostly AI we'll see how it goes..
+
 
 To view just:
 `npm install`
