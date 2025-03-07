@@ -19,7 +19,7 @@ const products = [
       id: 3,
       name: 'Walnut Serving Tray',
       price: 89.0,
-      image: '/images/walnut-tray.jpg',
+      image: '/images/walnut-board.jpg',
       description: 'Elegant walnut wood serving tray with raised edges',
       dimensions: '14" x 10" x 1"'
     },
@@ -35,7 +35,7 @@ const products = [
       id: 5,
       name: 'Bamboo Cutting Board Set',
       price: 49.0,
-      image: '/images/bamboo-set.jpg',
+      image: '/images/bamboo-board.jpg',
       description: 'Set of 3 bamboo cutting boards in various sizes',
       dimensions: 'Small: 8" x 6", Medium: 12" x 9", Large: 16" x 12"'
     }

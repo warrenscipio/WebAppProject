@@ -14,6 +14,7 @@ const DraggableElement = ({ type, content, position, style }) => {
 
   useEffect(() => {
     const handleMouseMove = (e) => {
+
       if (isDragging) {
         const x = e.clientX - dragOffset.x;
         const y = e.clientY - dragOffset.y;
@@ -43,11 +44,13 @@ const DraggableElement = ({ type, content, position, style }) => {
 
   const handleMouseDown = (e) => {
     if (elementRef.current) {
-      const rect = elementRef.current.getBoundingClientRect();
+      const rect = elementRef.current.offsetParent.getBoundingClientRect();
+      
       setDragOffset({
-        x: e.clientX - rect.left,
-        y: e.clientY - rect.top
+        x: rect.x,
+        y: rect.y
       });
+      
       setIsDragging(true);
     }
   };
