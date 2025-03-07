@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My React Apps</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .tabs { display: flex; cursor: pointer; margin-bottom: 10px; }
+        .tab { padding: 10px 20px; border: 1px solid #ccc; border-bottom: none; }
+        .tab.active { background-color: #ddd; }
+        .iframe-container { display: none; }
+        .iframe-container.active { display: block; }
+    </style>
 </head>
-
 <body>
-    <div>This is a empty index file</div>
+    <div class="tabs">
+        <div class="tab active" onclick="showIframe(0)">Tab 1</div>
+        <div class="tab" onclick="showIframe(1)">Tab 2</div>
+        <div class="tab" onclick="showIframe(2)">Tab 3</div>
+    </div>
+    
+    <div class="iframe-container active" id="iframe-0">
+        <iframe src="../Apps/ChatGPT/Test/index.html" width="100%" height="400px"></iframe>
+    </div>
+    <div class="iframe-container" id="iframe-1">
+        <iframe src="../Apps/Claude.ai/Test/index.html" width="100%" height="400px"></iframe>
+    </div>
+    <div class="iframe-container" id="iframe-2">
+        <iframe src="../Apps/DeepSeek/Test/index.html" width="100%" height="400px"></iframe>
+    </div>
+    
+    <script>
+        function showIframe(index) {
+            document.querySelectorAll('.iframe-container').forEach((el, i) => {
+                el.classList.toggle('active', i === index);
+            });
+            document.querySelectorAll('.tab').forEach((el, i) => {
+                el.classList.toggle('active', i === index);
+            });
+        }
+    </script>
 </body>
-
 </html>
